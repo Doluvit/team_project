@@ -16,6 +16,10 @@
  */
 import refs from "./js/refs";
 import { formSubmit } from "./js/formSubmit";
+import { renderNotes } from "./js/renderNotes";
+import localStorageAPI from "./js/localStorageAPI";
 
+renderNotes(localStorageAPI.getNotes());
 refs.form.addEventListener('submit', formSubmit);
+
 
