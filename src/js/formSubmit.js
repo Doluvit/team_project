@@ -1,8 +1,8 @@
-import { createNote } from "./createNote";
-
+import { createNote } from './createNote';
+import localStorageAPI from './localStorageAPI';
 
 export function formSubmit(e) {
   e.preventDefault();
-   console.log(createNote(e));
+  localStorageAPI.addNote(createNote(e));
+  e.currentTarget.reset();
 }
-
