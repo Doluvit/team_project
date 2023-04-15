@@ -1,0 +1,2 @@
+var t={form:document.querySelector("#task-form"),list:document.querySelector("#task-list")};function e(t){const e={id:Date.now()};return new FormData(t.currentTarget).forEach(((t,r)=>{e[r]=t})),e}var r={addNote:function(t){const e=JSON.parse(localStorage.getItem("data-storage"))||[];e.push(t),localStorage.setItem("data-storage",JSON.stringify(e))}};t.form.addEventListener("submit",(function(t){t.preventDefault(),r.addNote(e(t)),t.currentTarget.reset()}));
+//# sourceMappingURL=index.704ac440.js.map
